@@ -203,7 +203,7 @@ else:
 print("\n")
 save_file = False
 while True:
-    user_export_input = input("Вы хотите экспортировать файлы для EXCEL или POWER BI ? (y/n, да/нет, Enter=да): ").lower().strip()
+    user_export_input = input("Вы хотите экспортировать файлы в EXCEL или CSV ? (y/n, да/нет, Enter=да): ").lower().strip()
     if user_export_input in ['', 'y', 'yes', 'да', 'д']:  # ДА
         save_file = True
         print("\n")
@@ -220,26 +220,26 @@ while True:
 
 if save_file:
     while True:
-        user_export_input = input("Экспортировать:\n1. EXCEL\n2. POWER BI\n3. EXCEL И POWER BI\n0. ВЫХОД\n(Введите 1, 2, 3 или 0): ").lower().strip()
+        user_export_input = input("Экспортировать:\n1. EXCEL\n2. CSV\n3. EXCEL И CSV\n0. ВЫХОД\n(Введите 1, 2, 3 или 0): ").lower().strip()
         if user_export_input == '1':  # EXCEL
             melb_data.to_excel('Melbourne_Property_Data.xlsx', index=False)
             print("\n")
             print("Выбрано: Экспортировать файл для EXCEL.")
             print("Файл создан:")
             print("   • 'Melbourne_Property_Data.xlsx' ")
-        elif user_export_input == '2':  # POWER BI
+        elif user_export_input == '2':  # CSV
             type_export_file = True
             melb_data.to_csv('Melbourne_Property_Data.csv', index=False)
             print("\n")
-            print("Выбрано: Экспортировать файл для POWER BI.")
+            print("Выбрано: Экспортировать файл в CSV.")
             print("Файл создан:")
             print("   • 'Melbourne_Property_Data.csv' ")
-        elif user_export_input == '3':  # EXCEL И POWER BI
+        elif user_export_input == '3':  # EXCEL И CSV
             type_export_file = True
             melb_data.to_excel('Melbourne_Property_Data.xlsx', index=False)
             melb_data.to_csv('Melbourne_Property_Data.csv', index=False)
             print("\n")
-            print("Выбрано: Экспортировать файл для EXCEL и POWER BI.")
+            print("Выбрано: Экспортировать файл в EXCEL и CSV.")
             print("Файлы созданы:")
             print("   • 'Melbourne_Property_Data.xlsx' ")
             print("   • 'Melbourne_Property_Data.csv' ")

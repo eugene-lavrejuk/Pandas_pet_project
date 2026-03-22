@@ -45,6 +45,8 @@ https://raw.githubusercontent.com/esabunor/MLWorkspace/master/melb_data.csv
   - Price < 6,000,000  
 - Исправлен тип данных:  
   - Car → int64  
+  - Postcode → int64
+  - Bathroom → int64
 ---
 ### 3. Feature Engineering (новые признаки)
 Добавлены:
@@ -76,7 +78,7 @@ https://raw.githubusercontent.com/esabunor/MLWorkspace/master/melb_data.csv
 ### 7. Экспорт данных
 Поддерживается экспорт:
 - Excel → Melbourne_Property_Data.xlsx  
-- CSV (для Power BI) → Melbourne_Property_Data.csv  
+- CSV → Melbourne_Property_Data.csv  
 Пользователь может выбрать формат через CLI-интерфейс.
 ---
 ## Как запустить
