@@ -76,10 +76,14 @@ melb_data = melb_data[(melb_data['Rooms'] <= 10) & (melb_data['Price'] < 6000000
 print("Фильтр выбросов: Rooms <=10, Price <6млн")
 
 
-print("\n=== 2.7. Исправление типа данных ===") # 2.7. Исходный "Car" - float, что не совсем корректно.
+print("\n=== 2.7. Исправление типа данных ===") # 2.7. Исходный "Car", 'Postcode' и 'Bathroom' - float, что не совсем корректно.
 print()
 print('Исходный "Car" - float, что не совсем корректно. ')
 melb_data['Car'] = melb_data['Car'].astype('int64')
+melb_data['Bathroom'] = melb_data['Bathroom'].astype('int64')
+melb_data['Postcode'] = melb_data['Postcode'].astype('int64')
+print("Bathroom → int64")
+print("Postcode → int64")
 print("Car → int64")
 
 print("\n=== ОЧИСТКА ИТОГ: ===")
